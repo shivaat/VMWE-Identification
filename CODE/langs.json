@@ -1,0 +1,58 @@
+{
+  "EN": {
+            "train": "trainSequencesWordPOS",
+            "dev": "",
+            "test":"testSequencesWordPOS",
+            "word2vec_dir": "./dim100vecs",
+            "model_name": "model_withPOS",
+            "initial_weight": ""
+            },
+  "ES": {
+            "train": "trainSequencesWordPOS",
+            "dev": "devSequencesWordPOS",
+            "test":"testSequencesWordPOS",
+            "word2vec_dir": "./dim100vecs",
+            "model_name": "model_withPOS",
+            "initial_weight": ""
+            },
+  "SL": {
+            "train": "trainSequencesWordPOS",
+            "dev": "devSequencesWordPOS",
+            "test":"testSequencesWordPOS",
+            "word2vec_dir": "",
+            "model_name": "model_withPOS",
+            "initial_weight": ""
+            },
+  "RO": {
+            "train": "trainSequencesWordPOS",
+            "dev": "devSequencesWordPOS",
+            "test":"testSequencesWordPOS",
+            "word2vec_dir": "",
+            "model_name": "model_withPOS",
+            "initial_weight": ""
+            },
+  "HE": {
+            "train": "trainSequencesWordPOS",
+            "dev": "devSequencesWordPOS",
+            "test":"testSequencesWordPOS",
+            "word2vec_dir": "",
+            "model_name": "model_withPOS",
+            "initial_weight": ""
+            },
+  "PL": {
+            "train": "trainSequencesWordPOS",
+            "dev": "devSequencesWordPOS",
+            "test":"testSequencesWordPOS",
+            "word2vec_dir": "",
+            "model_name": "model_withPOS",
+            "initial_weight": ""
+            },
+  "TR": {
+            "train": "trainSequencesWordPOS",
+            "dev": "devSequencesWordPOS",
+            "test":"testSequencesWordPOS",
+            "word2vec_dir": "",
+            "model_name": "model_withPOS",
+            "initial_weight": ""
+            }
+}
