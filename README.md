@@ -11,4 +11,4 @@ The scripts for running the code are provided in the directory `CODE`. The scrip
 
 `python3 test_run.py`
 
-In order to run the programe for any other languages list their code in the list `languages`. The `langs.json` file includes the training settings for each language including the train, dev and test files, word2vec path, the name of the model you would like to run and the initial weight (if you have some saved weights from before and you want to continue on that).
+In order to run the program for any other languages list their code in the list `languages`. The `langs.json` file includes the training settings for each language including the train, dev and test files, word2vec path, the name of the model you would like to run and the initial weight (if you have some saved weights from before and you want to continue on that).
