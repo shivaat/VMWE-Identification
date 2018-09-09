@@ -6,4 +6,5 @@ We developed a ConvNet + LSTM (+ CRF) neural network architecture which recieves
 
 The data is annotated by Parseme members and more information about it is available at a [Parseme dedicated page](http://parsemefr.lif.univ-mrs.fr/parseme-st-guidelines/1.1/). We converted the data to our favourable format of .pkl lists which ignore dependency parsed information which we do not use for this system. The labels in our .pkl lists are in IOB-like format.
 
-The scripts for running the code are provided in the directory `CODE`.
+##Usage
+The scripts for running the code are provided in the directory `CODE`. The script `test_run.py` is a sample code for training the system and testing it on selected languages which are listed in the list `languages`.
