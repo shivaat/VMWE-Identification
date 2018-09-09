@@ -4,7 +4,6 @@ from script import Script
 with open('langs.json') as f:
     langs = json.load(f)
 
-
 languages = ['ES', 'EN'] 
 
 for lang in languages:
