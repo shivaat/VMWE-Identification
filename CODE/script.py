@@ -48,18 +48,18 @@ class Script(object):
 
 	def read_train_test(self):
 		### reading train and test ###
-		self.train = pickle.load(open('../{}/{}.pkl'.format(self.lang, self.train), 'rb'))
+		self.train = pickle.load(open('../DATA/{}/{}.pkl'.format(self.lang, self.train), 'rb'))
 		self.X_train = [[x[0].lower() for x in elem] for elem in self.train]
 		self.y_train = [[x[5] for x in elem] for elem in self.train]
 		self.pos_train = [[x[2] for x in elem] for elem in self.train]
 		if self.dev:
-                        self.dev = pickle.load(open('../{}/{}.pkl'.format(self.lang, self.dev), 'rb'))
+                        self.dev = pickle.load(open('../DATA/{}/{}.pkl'.format(self.lang, self.dev), 'rb'))
                         self.X_train = self.X_train + [[x[0].lower() for x in elem] for elem in self.dev]
                         self.y_train = self.y_train + [[x[5] for x in elem] for elem in self.dev]
                         self.pos_train = self.pos_train + [[x[2] for x in elem] for elem in self.dev]
                         
                 
-		self.test = pickle.load(open('../{}/{}.pkl'.format(self.lang, self.test), 'rb'))
+		self.test = pickle.load(open('../DATA/{}/{}.pkl'.format(self.lang, self.test), 'rb'))
 		self.X_test = [[x[0].lower() for x in elem] for elem in self.test]
 		self.y_test = [[x[5] for x in elem] for elem in self.test]
 		self.pos_test = [[x[2] for x in elem] for elem in self.test]
@@ -139,6 +139,7 @@ class Script(object):
 			print("pos array shape",self.pos_train_enc.shape)
 
 		########## Access pre-trained embedding for the words list [START] ####
+	
 		self.wvmodel = KeyedVectors.load_word2vec_format("{}".format(self.word2vec_dir))
 
 		self.embedding_dimension = self.wvmodel.vector_size + 7
@@ -281,7 +282,7 @@ class Script(object):
 		    pickle.dump(final_preds, f)
 		with open(predictionFileName+'.pkl', 'rb') as f:
 		    labels1 = pickle.load(f)
-		labels2Parsemetsv(labels1, '../{}/test.blind.cupt'.format(self.lang), predictionFileName+'_system.cupt')
+		labels2Parsemetsv(labels1, '../DATA/{}/test.blind.cupt'.format(self.lang), predictionFileName+'_system.cupt')
 
 		with open(res_dir +'/eval_'.format(self.lang)+self.model_name+'.txt', 'w') as f:
-			f.write(subprocess.check_output(["../bin/evaluate.py", "--gold", "../{}/test.cupt".format(self.lang), "--pred", predictionFileName+"_system.cupt" ]).decode())
+			f.write(subprocess.check_output(["../bin/evaluate.py", "--gold", "../DATA/{}/test.cupt".format(self.lang), "--pred", predictionFileName+"_system.cupt" ]).decode())
