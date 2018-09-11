@@ -18,5 +18,8 @@ The scripts for running the code are provided in the directory `CODE`. The scrip
 
 `python3 test_run.py`
 
-The word2vec path refers to a simple trained word2vec which we uploaded in this directory just as a example. Please download the relevant word2vec from [fastText repository](https://github.com/facebookresearch/fastText/blob/master/pretrained-vectors.md) and add the path in your computer. 
-In order to run the program for any other languages, list their code in the list `languages`. The `langs.json` file includes the training settings for each language including the train, dev and test files, word2vec path, the name of the model you would like to run and the initial weight (if you have some saved weights from before and you want to continue on that).
+It calls `script.py` with the parameters in `langs.json`. The `langs.json` file includes the training settings for each language including the train, dev and test files, word2vec path, the name of the model you would like to run and the initial weight (if you have some saved weights from before and you want to continue on that).
+The `test_run.py`, at the moment, runs the program for two languages `ES` and `EN` with a simple trained word2vec (which we uploaded in this directory just as an example). 
+In order to run the program for any other languages, list their code in the list `languages`. 
+For each language, please download the relevant word2vec from [fastText repository](https://github.com/facebookresearch/fastText/blob/master/pretrained-vectors.md) and add its path to the `langs.json` file as the value for `word2vec_dir`. 
+Other parameters in `test_run.py` are the number of epochs, batch size and if you want to use POS features which are set by `l.set_params(10, 100, True)`. 
