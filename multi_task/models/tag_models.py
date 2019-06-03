@@ -11,7 +11,6 @@ from keras.layers.wrappers import TimeDistributed
 from keras import regularizers
 from keras.regularizers import l2
 import keras.initializers
-#from models.crf import CRF
 from models.layers import * 
 
 class Tagger(object):
